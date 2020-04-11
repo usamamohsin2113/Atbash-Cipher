@@ -15,14 +15,14 @@ namespace AtbashCipherConsoleApplication
             //Loop through each chracter in the given string
             foreach (char item in value)
             {
-                if (item>=65 && item<=90)
+                if (item >= 65 && item <= 90)
                 {
-                    encrypted+=(char)('Z'-item+65);
+                    encrypted += (char)('Z' - item + 65);
                 }
-                else if (item>=97&&item<=122)
+                else if (item >= 97 && item <= 122)
                 {
-                    encrypted+=(char)('z'-item+97);
-                }                
+                    encrypted += (char)('z' - item + 97);
+                }
             }
             return encrypted;
         }
