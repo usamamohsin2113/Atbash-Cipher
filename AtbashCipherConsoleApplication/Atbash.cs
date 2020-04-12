@@ -8,7 +8,7 @@ namespace AtbashCipherConsoleApplication
     class Atbash
     {
         //This method will be used to cipher or decipher the given value
-        string EncrypterAndDecrypter(string value)
+        private static string EncrypterAndDecrypter(string value)
         {
             string encrypted = "";
 
@@ -24,20 +24,21 @@ namespace AtbashCipherConsoleApplication
                     encrypted += (char)('z' - item + 97);
                 }
             }
+
             return encrypted;
         }
 
 
         // This method will take plain text and returns cipher of it
-        public string Encrypt(string value)
+        public static string Encrypt(string value)
         {
-            return this.EncrypterAndDecrypter(value);
+            return EncrypterAndDecrypter(value);
         }
 
         // This method will take cipher text and produce decipher of it
-        public string Decrypt(string value)
+        public static string Decrypt(string value)
         {
-            return this.EncrypterAndDecrypter(value);
+            return EncrypterAndDecrypter(value);
         }
     }
 }

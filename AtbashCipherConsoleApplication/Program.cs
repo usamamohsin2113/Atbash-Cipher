@@ -9,13 +9,14 @@ namespace AtbashCipherConsoleApplication
     {
         static void Main(string[] args)
         {
-            string value;
-            Atbash ob = new Atbash();
-            Console.Write("Enter value to be encrypted : ");
-            value = Console.ReadLine();
+            Console.Write("Enter value to be encrypted: ");
+            string value = Console.ReadLine();
 
-            Console.WriteLine(ob.Encrypt(value));
-            Console.WriteLine(ob.Decrypt(ob.Encrypt(value)));
+            string encryptedValue = Atbash.Encrypt(value);
+            string decryptedValue = Atbash.Decrypt(encryptedValue);
+
+            Console.WriteLine("Encrypted Text: " + encryptedValue);
+            Console.WriteLine("Decrypted Text: " + decryptedValue);
         }
     }
 }
